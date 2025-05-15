@@ -1,6 +1,6 @@
-import { MeshGradientView } from 'expo-mesh-gradient';
-import { useState } from 'react';
-import { View } from 'react-native';
+import { MeshGradientView } from "expo-mesh-gradient";
+import { useState } from "react";
+import { View } from "react-native";
 
 export default function EasyEmoneyGradientMesh() {
   const [points, setPoints] = useState(initialPoints());
@@ -19,25 +19,43 @@ export default function EasyEmoneyGradientMesh() {
   // }, []);
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'black', position: 'absolute', width: '100%', height: '100%', zIndex: -1 }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "black",
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        zIndex: -1,
+      }}
+    >
       <MeshGradientView
-      style={{ flex: 1 }}
-      columns={3}
-      rows={3}
-      colors={['red', 'purple', 'indigo', 'orange', 'white', 'blue', 'yellow', 'green', 'cyan']}
-      points={[
-        [0.0, 0.0],
-        [0.5, 0.0],
-        [1.0, 0.0],
-        [0.0, 0.5],
-        [0.5, 0.5],
-        [1.0, 0.5],
-        [0.0, 1.0],
-        [0.5, 1.0],
-        [1.0, 1.0],
-      ]}
-    />
-
+        style={{ flex: 1 }}
+        columns={3}
+        rows={3}
+        colors={[
+          "red",
+          "purple",
+          "indigo",
+          "orange",
+          "white",
+          "blue",
+          "yellow",
+          "green",
+          "cyan",
+        ]}
+        points={[
+          [0.0, 0.0],
+          [0.5, 0.0],
+          [1.0, 0.0],
+          [0.0, 0.5],
+          [0.5, 0.5],
+          [1.0, 0.5],
+          [0.0, 1.0],
+          [0.5, 1.0],
+          [1.0, 1.0],
+        ]}
+      />
     </View>
   );
 }

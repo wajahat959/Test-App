@@ -1,35 +1,45 @@
-import { useRouter } from 'expo-router';
-import { useState } from 'react';
-import { Button, StyleSheet, View } from 'react-native';
+import { useRouter } from "expo-router";
+import { Button, View } from "react-native";
 export default function HomeScreen() {
-  const [color, setColor] = useState('#FF0000');
-  const router = useRouter()
+  const router = useRouter();
   return (
- <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-   <Button title='Color Picker' onPress={()=>{router.replace('/(auth)/color_picker')}} />
-   <Button title='Bottom Sheet' onPress={()=>{router.replace('/(auth)/bottomsheet')}} />
-   <Button title='Date' onPress={()=>{router.replace('/(auth)/date')}} />
-
-
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Button
+        title="Color Picker"
+        onPress={() => {
+          router.push("/(auth)/color_picker");
+        }}
+      />
+      <Button
+        title="Bottom Sheet"
+        onPress={() => {
+          router.push("/(auth)/bottomsheet");
+        }}
+      />
+      <Button
+        title="Date"
+        onPress={() => {
+          router.push("/(auth)/date");
+        }}
+      />
+         <Button
+        title="Segment"
+        onPress={() => {
+          router.push("/(auth)/segmented");
+        }}
+      />
+       <Button
+        title="Picker Wheel"
+        onPress={() => {
+          router.push("/(auth)/pickerWheel");
+        }}
+      />
+        <Button
+        title="Switch"
+        onPress={() => {
+          router.push("/(auth)/switch");
+        }}
+      />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
